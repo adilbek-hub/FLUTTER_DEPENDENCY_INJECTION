@@ -8,7 +8,7 @@ import 'package:dependency_injection_2_di_container/example_view_model.dart';
 void main() {
   const simmator = Summator();
   const service = CalculatorService(simmator);
-  const model = ExampleCalcViewModel2(service);
+  const model = ExampleCalcViewModel(service);
   const widget = DependencyInjection(model: model);
   const app = MyApp(widget: widget);
   runApp(app);

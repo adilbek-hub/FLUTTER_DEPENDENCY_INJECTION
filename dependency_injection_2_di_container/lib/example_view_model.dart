@@ -1,13 +1,8 @@
 import 'package:dependency_injection_2_di_container/features/presentation/widgets/calculator_service.dart';
 import 'package:dependency_injection_2_di_container/features/presentation/pages/dependency_injection_two.dart';
-import 'package:dependency_injection_2_di_container/features/presentation/widgets/summator.dart';
 
-class ExampleCalcViewModel2 implements ExampleAbstractClass {
-  const ExampleCalcViewModel2(this.calculatorService);
-  // {
-  //   const summator = Summator();
-  //   calculatorService = const CalculatorService(summator);
-  // }
+class ExampleCalcViewModel implements ExampleAbstractClass {
+  const ExampleCalcViewModel(this.calculatorService);
   final CalculatorService calculatorService;
   @override
   void onPressMe1() {
@@ -25,8 +20,8 @@ class ExampleCalcViewModel2 implements ExampleAbstractClass {
   }
 }
 
-class ExamplePetViewModel2 implements ExampleAbstractClass {
-  const ExamplePetViewModel2();
+class ExamplePetViewModel implements ExampleAbstractClass {
+  const ExamplePetViewModel();
   @override
   void onPressMe1() {
     print('GAF GAF');
