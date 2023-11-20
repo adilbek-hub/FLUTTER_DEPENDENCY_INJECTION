@@ -1,16 +1,13 @@
-import 'package:dependency_injection_2_di_container/features/presentation/pages/dependency_injection_two.dart';
-import 'package:dependency_injection_2_di_container/features/presentation/widgets/calculator_service.dart';
-import 'package:dependency_injection_2_di_container/features/presentation/widgets/summator.dart';
+import 'package:dependency_injection_2_di_container/features/data/factories/di_conatiner.dart';
 import 'package:flutter/material.dart';
 
-import 'package:dependency_injection_2_di_container/example_view_model.dart';
+abstract class MainDIconatiner {
+  Widget makeApp();
+}
 
+final diContainer = makeDiContainer();
 void main() {
-  const simmator = Summator();
-  const service = CalculatorService(simmator);
-  const model = ExampleCalcViewModel(service);
-  const widget = DependencyInjection(model: model);
-  const app = MyApp(widget: widget);
+  final app = diContainer.makeApp();
   runApp(app);
 }
 
